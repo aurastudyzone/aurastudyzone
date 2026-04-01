@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AuraStudyZone | Study & Astrology</title>
+
+<meta name="description" content="Learn study tips, maths tricks, astrology, numerology and success strategies in Hindi & English.">
+
+<style>
+body {margin:0;font-family:Segoe UI;background:#f5f7fa;}
+header {background:linear-gradient(135deg,#4CAF50,#1b5e20);color:white;padding:20px;text-align:center;}
+nav {background:#111;text-align:center;}
+nav a {color:white;padding:12px;text-decoration:none;display:inline-block;}
+nav a:hover {background:#4CAF50;}
+
+.hero {padding:50px;text-align:center;}
+.hero h1 {font-size:38px;}
+
+.container {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:20px;}
+
+.card {
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+width:90%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button {
+background:#4CAF50;
+color:white;
+padding:10px 15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer {
+background:#000;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+.ad-box {
+background:#e0e0e0;
+text-align:center;
+padding:20px;
+margin:20px;
+border-radius:10px;
+}
+
+.lang-btn {
+position:absolute;
+top:10px;
+right:10px;
+}
+</style>
+
+<script>
+function toggleLang(){
+let en=document.getElementById("en");
+let hi=document.getElementById("hi");
+
+if(en.style.display==="none"){
+en.style.display="block";
+hi.style.display="none";
+}else{
+en.style.display="none";
+hi.style.display="block";
+}
+}
+
+function calculateAge(){
+let year=document.getElementById("birthYear").value;
+let age=new Date().getFullYear()-year;
+document.getElementById("result").innerText="Your Age: "+age;
+}
+
+function luckyNumber(){
+let num=document.getElementById("num").value;
+let sum=num.split('').reduce((a,b)=>a+parseInt(b),0);
+document.getElementById("luck").innerText="Lucky Number: "+sum;
+}
+
+function sendMessage(){
+alert("Message sent! (Connect backend later)");
+}
+</script>
+
+</head>
+
+<body>
+
+<button class="lang-btn" onclick="toggleLang()">🌐 हिंदी / English</button>
+
+<header>
+<h1>AuraStudyZone</h1>
+<p>Study • Astrology • Success</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Study</a>
+<a href="#">Astrology</a>
+<a href="#">Tools</a>
+<a href="#">Blog</a>
+<a href="#">Contact</a>
+</nav>
+
+<!-- ENGLISH -->
+<div id="en">
+
+<section class="hero">
+<h1>Learn Smart. Discover Destiny.</h1>
+<p>Study Tips 📚 | Numerology 🔢 | Success 🚀</p>
+</section>
+
+<div class="ad-box">Ad Space (Google AdSense)</div>
+
+<section class="container">
+
+<div class="card">
+<h2>📚 Study Tips</h2>
+<p>Math tricks, notes, and exam strategies.</p>
+</div>
+
+<div class="card">
+<h2>🔮 Astrology</h2>
+<p>Numerology, lucky numbers, kundali basics.</p>
+</div>
+
+<div class="card">
+<h2>🧮 Age Calculator</h2>
+<input type="number" id="birthYear" placeholder="Enter Birth Year">
+<button onclick="calculateAge()">Calculate</button>
+<p id="result"></p>
+</div>
+
+<div class="card">
+<h2>🔢 Lucky Number</h2>
+<input type="text" id="num" placeholder="Enter Number">
+<button onclick="luckyNumber()">Find</button>
+<p id="luck"></p>
+</div>
+
+<div class="card">
+<h2>📝 Blog</h2>
+<p>Coming Soon: Articles on study & astrology.</p>
+</div>
+
+<div class="card">
+<h2>📩 Contact</h2>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Your Message"></textarea>
+<button onclick="sendMessage()">Send</button>
+</div>
+
+</section>
+
+</div>
+
+<!-- HINDI -->
+<div id="hi" style="display:none;">
+
+<section class="hero">
+<h1>स्मार्ट पढ़ाई करें, अपनी किस्मत जानें</h1>
+<p>स्टडी टिप्स 📚 | ज्योतिष 🔮 | सफलता 🚀</p>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 AuraStudyZone | Built for Growth 🚀</p>
+</footer>
+
+</body>
+</html>
