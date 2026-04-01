@@ -1,111 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>AuraStudyZone</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AuraStudyZone | Study & Astrology</title>
-
-<meta name="description" content="Learn study tips, maths tricks, astrology, numerology and success strategies in Hindi & English.">
-
 <style>
-body {margin:0;font-family:Segoe UI;background:#f5f7fa;}
-header {background:linear-gradient(135deg,#4CAF50,#1b5e20);color:white;padding:20px;text-align:center;}
+body {margin:0;font-family:Segoe UI;background:#f4f6f9;}
+header {background:linear-gradient(135deg,#4CAF50,#1b5e20);color:white;text-align:center;padding:25px;}
 nav {background:#111;text-align:center;}
-nav a {color:white;padding:12px;text-decoration:none;display:inline-block;}
+nav a {color:white;padding:14px;text-decoration:none;display:inline-block;}
 nav a:hover {background:#4CAF50;}
 
-.hero {padding:50px;text-align:center;}
-.hero h1 {font-size:38px;}
+.hero {
+text-align:center;
+padding:40px;
+background:white;
+}
 
-.container {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:20px;}
+.hero h1 {font-size:32px;color:#333;}
+.hero p {color:#666;}
+
+.btn {
+background:#4CAF50;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+.container {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
 
 .card {
 background:white;
 padding:20px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
 }
 
-input, textarea {
-width:90%;
-padding:10px;
-margin:10px 0;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-button {
-background:#4CAF50;
-color:white;
-padding:10px 15px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
+.card h2 {color:#4CAF50;}
 
 footer {
 background:#000;
 color:white;
 text-align:center;
 padding:15px;
-}
-
-.ad-box {
-background:#e0e0e0;
-text-align:center;
-padding:20px;
-margin:20px;
-border-radius:10px;
-}
-
-.lang-btn {
-position:absolute;
-top:10px;
-right:10px;
+margin-top:20px;
 }
 </style>
-
-<script>
-function toggleLang(){
-let en=document.getElementById("en");
-let hi=document.getElementById("hi");
-
-if(en.style.display==="none"){
-en.style.display="block";
-hi.style.display="none";
-}else{
-en.style.display="none";
-hi.style.display="block";
-}
-}
-
-function calculateAge(){
-let year=document.getElementById("birthYear").value;
-let age=new Date().getFullYear()-year;
-document.getElementById("result").innerText="Your Age: "+age;
-}
-
-function luckyNumber(){
-let num=document.getElementById("num").value;
-let sum=num.split('').reduce((a,b)=>a+parseInt(b),0);
-document.getElementById("luck").innerText="Lucky Number: "+sum;
-}
-
-function sendMessage(){
-alert("Message sent! (Connect backend later)");
-}
-</script>
-
 </head>
 
 <body>
 
-<button class="lang-btn" onclick="toggleLang()">🌐 हिंदी / English</button>
-
 <header>
 <h1>AuraStudyZone</h1>
-<p>Study • Astrology • Success</p>
+<p>Study Smart 📚 | Know Your Destiny 🔮 | Grow Daily 🚀</p>
 </header>
 
 <nav>
@@ -116,71 +73,57 @@ alert("Message sent! (Connect backend later)");
 <a href="contact.html">Contact</a>
 </nav>
 
-<!-- ENGLISH -->
-<div id="en">
-
+<!-- HERO SECTION -->
 <section class="hero">
-<h1>Learn Smart. Discover Destiny.</h1>
-<p>Study Tips 📚 | Numerology 🔢 | Success 🚀</p>
+<h1>Welcome to AuraStudyZone</h1>
+<p>Your one-stop platform for study success and astrology guidance</p>
+
+<a href="study.html" class="btn">Start Learning</a>
+<a href="astrology.html" class="btn">Check Lucky Number</a>
 </section>
 
-<div class="ad-box">Ad Space (Google AdSense)</div>
-
+<!-- MAIN CARDS -->
 <section class="container">
 
 <div class="card">
 <h2>📚 Study Tips</h2>
-<p>Math tricks, notes, and exam strategies.</p>
+<p>Learn smart maths tricks, exam strategies and boost your performance.</p>
+<a href="study.html" class="btn">Explore Study</a>
 </div>
 
 <div class="card">
-<h2>🔮 Astrology</h2>
-<p>Numerology, lucky numbers, kundali basics.</p>
+<h2>🔮 Astrology & Numerology</h2>
+<p>Discover your lucky number, personality traits and life path.</p>
+<a href="astrology.html" class="btn">Explore Astrology</a>
 </div>
 
 <div class="card">
-<h2>🧮 Age Calculator</h2>
-<input type="number" id="birthYear" placeholder="Enter Birth Year">
-<button onclick="calculateAge()">Calculate</button>
-<p id="result"></p>
+<h2>🧮 Free Tools</h2>
+<p>Use powerful calculators like age calculator and more.</p>
+<a href="tools.html" class="btn">Use Tools</a>
 </div>
 
 <div class="card">
-<h2>🔢 Lucky Number</h2>
-<input type="text" id="num" placeholder="Enter Number">
-<button onclick="luckyNumber()">Find</button>
-<p id="luck"></p>
-</div>
-
-<div class="card">
-<h2>📝 Blog</h2>
-<p>Coming Soon: Articles on study & astrology.</p>
-</div>
-
-<div class="card">
-<h2>📩 Contact</h2>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message"></textarea>
-<button onclick="sendMessage()">Send</button>
+<h2>🚀 Daily Growth</h2>
+<p>Improve your mindset, habits and success strategy.</p>
+<a href="contact.html" class="btn">Contact Us</a>
 </div>
 
 </section>
 
-</div>
-
-<!-- HINDI -->
-<div id="hi" style="display:none;">
-
+<!-- EXTRA CONTENT -->
 <section class="hero">
-<h1>स्मार्ट पढ़ाई करें, अपनी किस्मत जानें</h1>
-<p>स्टडी टिप्स 📚 | ज्योतिष 🔮 | सफलता 🚀</p>
+<h2>🔥 Why Choose AuraStudyZone?</h2>
+<p>
+✔ Simple learning methods <br>
+✔ Powerful numerology insights <br>
+✔ Free tools for daily use <br>
+✔ Content in Hindi & English
+</p>
 </section>
-
-</div>
 
 <footer>
-<p>© 2026 AuraStudyZone | Built for Growth 🚀</p>
+<p>© 2026 AuraStudyZone | All Rights Reserved</p>
 </footer>
 
 </body>
